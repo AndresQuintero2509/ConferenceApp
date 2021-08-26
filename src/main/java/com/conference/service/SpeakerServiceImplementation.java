@@ -10,6 +10,9 @@ public class SpeakerServiceImplementation implements SpeakerService {
 
     private SpeakerRepository repository;
 
+    public SpeakerServiceImplementation(SpeakerRepository speakerRepository){
+        repository = speakerRepository;
+    }
     @Override
     public List<Speaker> findAll() {
         return repository.findAll();
